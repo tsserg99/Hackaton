@@ -103,4 +103,4 @@ def foz():
     return render_template('agro.html', r=run(), l1=length_1)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000, host=0000)
+    app.run(debug=True, port=5000, host="0.0.0.0")
