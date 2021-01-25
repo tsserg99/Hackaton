@@ -1,5 +1,7 @@
 # Hackaton
 
+This project uses **python3**.
+
 Steps to run via ***Docker***:
 1. git clone https://github.com/tsserg99/Hackaton.git
 2. cd Hackaton
