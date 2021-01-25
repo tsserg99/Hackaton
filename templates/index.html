@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js"> </script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/patatos.css') }}">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index">Patatos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="rozetka">Розетка</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="agro">Agro-Ukraine</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fozzy">Fozzy</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<svg viewBox="0 0 800 600">
+  <symbol id="s-text">
+    <text text-anchor="middle"
+          x="50%"
+          y="20%"
+          class="text--line"
+          >
+      THE
+
+    </text>
+ <text text-anchor="middle"
+          x="50%"
+          y="35%"
+          class="text--line"
+          >
+      PATATOS
+
+    </text>
+     <text text-anchor="middle"
+          x="50%"
+          y="55%"
+          class="text--line"
+          >
+      TEAM
+
+    </text>
+
+  </symbol>
+
+  <g class="g-ants">
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+    <use xlink:href="#s-text"
+      class="text-copy"></use>
+  </g>
+
+
+</svg>
+
+
+
+
+
+
+
+</body>
+</html>
