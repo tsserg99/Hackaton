@@ -3,7 +3,6 @@ from flask import Flask, render_template
 from bs4 import BeautifulSoup
 import logging.handlers
 
-
 app = Flask(__name__)
 
 url = 'https://rozetka.com.ua/ua/krupy/c4628397/vid-225787=grechka/'
@@ -18,12 +17,9 @@ soup = BeautifulSoup(response.text, 'lxml')
 quotes = soup.find_all('span', class_='goods-tile__title')
 price = soup.find_all('span', class_='goods-tile__price-value')
 
-
-
 soup_2 = BeautifulSoup(response_2.text, 'lxml')
 quotes_2 = soup_2.find_all('a', class_='i_title ff2')
 price_2 = soup_2.find_all('span', class_='i_price')
-
 
 soup_3 = BeautifulSoup(response_3.text, 'lxml')
 quotes_3 = soup_3.find_all('div', class_='h3 product-title')
@@ -33,6 +29,7 @@ price_3 = soup_3.find_all('span', class_='product-price')
 @app.route("/")
 def index():
     return render_template('index.html')
+
 
 @app.route("/rozetka")
 def roz():
@@ -50,7 +47,6 @@ def roz():
         qu = []
         pr = []
         for i in range(len(quotes)):
-
             qu.append(quotes[i].text)
             pr.append(price[i].text + ' грн')
             r = {'username': qu, 'price': pr, 'space': ' \n'}
@@ -58,6 +54,7 @@ def roz():
         return r
 
     return render_template('rozetka.html', r=run(), l1=length_1, l=links())
+
 
 @app.route("/agro")
 def agr():
@@ -83,6 +80,7 @@ def agr():
 
     return render_template('agro.html', r=run(), l1=length_1, l=links())
 
+
 @app.route("/fozzy")
 def foz():
     length_1 = {'len': len(quotes)}
@@ -94,6 +92,7 @@ def foz():
             li.append(links.get('href'))
 
         return li
+
     def run():
         li = []
         pr = []
@@ -106,13 +105,14 @@ def foz():
 
     return render_template('fozzy.html', r=run(), l1=length_1, l=links())
 
+
 def foo():
     app.logger.warning('A warning occurred (%d apples)', 42)
     app.logger.error('An error occurred')
     app.logger.info('Info')
     return "logs"
 
+
 if __name__ == "__main__":
     logging.basicConfig(filename='error.log', level=logging.DEBUG)
     app.run(debug=True, port=5000, host="0.0.0.0")
-
