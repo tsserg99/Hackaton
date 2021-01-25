@@ -14,7 +14,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index">Patatos</a>
+  <a class="navbar-brand" href="/">Patatos</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,7 +41,7 @@
     <div class="offset-lg-1 col-lg-6">
    <div class="content">
         {% for i in range(l1.len)%}
-        <h6>{{r.username[i]}} {{r.price[i]}}</h6>
+        <h6><a href="{{ l[i] }}">{{r.username[i]}} {{r.price[i]}}</a></h6>
         {% endfor %}
     </div>
     </div>
@@ -51,6 +51,10 @@
     </div>
 
     </div>
+
+
+
+
 
 </body>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -62,7 +66,7 @@ function drawChart() {
         ['Рік', 'Ціна'],
         ['2017',  34,     ],
         ['2018',  28,     ],
-        ['20119',  25,    ],
+        ['2019',  25,    ],
         ['2020',  30,     ]
     ]);
 
